@@ -1,31 +1,38 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Temperature Calculator</title>
-	<link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="wrapper">
-	<div class="calcwrap">
-			<h1>TEMPERATURE CALCULATOR</h1>
-			<p>Celsius and Fahrenheit converter</p><br>
-		<div class="f-to-c">
-			<span>Enter Fahrenheit temp:</span>
-			<input type="text" id="frh" autofocus autocomplete="off">
-			<button type="submit" id="fhr-sub" onclick="fToC();">GO</button>
-			<span id="frh-result"></span>
-		</div><br>
-		<div class="c-to-f">
-			<span>Enter Celsius temp:</span>
-			<input type="text" id="cel" autocomplete="off">
-			<button type="submit" id="cel-sub" onclick="cToF();">GO</button>
-			<span id="cel-result"></span>
-		</div><br>
+    <h1>Temperature Converter</h1>
 
-	</div>
-</div>
+    <div class="converter">
+        <h2>Celsius to Fahrenheit</h2>
+        <div class="input-container">
+            <label for="celsius">Enter temperature in Celsius:</label>
+            <input type="number" id="celsius">
+            <button id="celsiusToFahrenheitBtn">Convert</button>
+        </div>
+        <div class="result-container">
+            <h3>Result:</h3>
+            <p id="celsiusResult"></p>
+        </div>
+    </div>
+
+    <div class="converter">
+        <h2>Fahrenheit to Celsius</h2>
+        <div class="input-container">
+            <label for="fahrenheit">Enter temperature in Fahrenheit:</label>
+            <input type="number" id="fahrenheit">
+            <button id="fahrenheitToCelsiusBtn">Convert</button>
+        </div>
+        <div class="result-container">
+            <h3>Result:</h3>
+            <p id="fahrenheitResult"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
