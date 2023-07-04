@@ -1,10 +1,10 @@
-var fToC = function() {
-    var fTemp = document.getElementById("frh").value;
-    var result1 = (fTemp - 32) * 5 / 9;
-    document.getElementById("frh-result").innerHTML = result1.toFixed(1) + " <small>degrees Celsius</small>";
-};
-var cToF = function() {
-    var cTemp = document.getElementById("cel").value;
-    var result2 = cTemp * 9 / 5 + 32;
-    document.getElementById("cel-result").innerHTML = result2.toFixed(1) + " <small>degrees Fahrenheit</small>";
-};
+document.getElementById("celsiusToFahrenheitBtn").addEventListener("click", function() {
+    var celsius = parseFloat(document.getElementById("celsius").value);
+    var fahrenheit = (celsius * 9 / 5) + 32;
+    document.getElementById("celsiusResult").innerHTML = celsius + "°C is equal to " + fahrenheit.toFixed(2) + "°F";
+});
+document.getElementById("fahrenheitToCelsiusBtn").addEventListener("click", function() {
+    var fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+    var celsius = (fahrenheit - 32) * 5 / 9;
+    document.getElementById("fahrenheitResult").innerHTML = fahrenheit + "°F is equal to " + celsius.toFixed(2) + "°C";
+});
